@@ -1,7 +1,33 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './pages/home/home.component';
+import { ContactoComponent } from './pages/contacto/contacto.component';
+import { AyudaComponent } from './pages/ayuda/ayuda.component';
+import { NotofundComponent } from './pages/notofund/notofund.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+
+  {
+    path:'',
+    component:HomeComponent
+  },
+  {
+    path:'home',
+    component:HomeComponent
+  },
+  {
+    path:'contacto',
+    component:ContactoComponent
+  },
+  {
+    path:'ayuda',
+    component:AyudaComponent
+  },
+  {
+    path:'**',
+    component:NotofundComponent
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
